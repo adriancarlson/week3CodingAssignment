@@ -40,7 +40,14 @@ function avgLettersPerName(array) {
 	let lengths = array.map(function (element) {
 		return element.length;
 	});
+	let sum = 0;
+	for (element of lengths) {
+		sum += element;
+	}
+	let avg = sum / arrayTotal;
+	return avg;
 }
+console.log(avgLettersPerName(names));
 
 // b.	Use a loop to iterate through the array again and concatenate all the names together, separated by spaces, and print the result to the console.
 
@@ -166,4 +173,6 @@ function canIBuyIt(cost, wallet) {
 		return false;
 	}
 }
+
+canIBuyIt(5, 50);
 // checks if I can purchase an item based on if the cost is less than the amount of money in my wallet.
